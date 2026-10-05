@@ -1,0 +1,43 @@
+# 构建
+build*/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# 编译产物
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 权重与分词器（模型文件不入库，获取方式见 README「先准备权重」）
+weights/
+*.sbs
+*.spm
+
+# 内部材料（不随项目发布）
+# 工作区记忆与发布评估都放在仓库之外，这里留一份兜底规则防止误 add。
+.workbuddy/

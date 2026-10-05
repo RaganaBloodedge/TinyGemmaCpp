@@ -1,0 +1,22 @@
+# 行尾约定：仓库内存 LF，检出时按平台还原。
+#
+# 这不是洁癖——项目里的 shell 脚本（build.sh、tools/*.sh）既要在 Git Bash 跑，
+# 也要在 WSL 里跑。带 CRLF 的脚本在 Linux 侧会报 `bad interpreter: /bin/bash^M`，
+# 而且这个错误只在切换平台时才暴露，最难排查。所以显式钉死。
+
+* text=auto
+
+*.sh    text eol=lf
+*.py    text eol=lf
+*.cc    text eol=lf
+*.h     text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+
+# 二进制不做行尾转换（权重与分词器本身不入库，见 .gitignore）
+*.sbs   binary
+*.spm   binary
+*.png   binary
+*.jpg   binary
+*.zip   binary
+*.gz    binary
