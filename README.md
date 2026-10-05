@@ -31,7 +31,7 @@ $ ./build/tinygemma --weights 2.0-2b-it-sfp.sbs \
 | 分词器 | 纯 Python 标准库实现的 SentencePiece（BPE）加载与编解码 |
 | 测试 | 算子单元测试 + 两套与外部参考实现的对拍 |
 
-## 这不是什么（诚信边界）
+## 这不是什么
 
 - **不是** gemma.cpp 的复制或改名。没有 include 它的任何头文件，没有链接它的任何库。
   与其构建体系（Highway SIMD、多 socket 线程池、sentencepiece、protobuf）完全无关。
